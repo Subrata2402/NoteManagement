@@ -10,7 +10,7 @@ def signup(request):
 		get_email = request.POST.get('email')
 		get_password = request.POST.get('password')
 		get_confirm_password = request.POST.get('cnfpassword')
-		print(get_email, get_password, get_confirm_password)
+		# print(get_email, get_password, get_confirm_password)
 		if get_password != get_confirm_password:
 			messages.info(request, "Password does not match")
 			return redirect('/auth/signup')
@@ -33,7 +33,7 @@ def handleLogin(request):
 		if not User.objects.filter(username=get_email).exists():
 			messages.error(request, "User does not exist")
 			return redirect('/auth/login')
-		myuser = User.objects.get(username=get_email, password=get_password)
+		myuser = authenticate(username=get_email, password=get_password)
 		if myuser:
 			login(request, myuser)
 			messages.success(request, "Logged in successfully!")
