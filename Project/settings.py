@@ -142,3 +142,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MESSAGE_TAGS ={
     messages.ERROR: 'danger',
 }
+
+import django_heroku
+django_heroku.settings(locals())
