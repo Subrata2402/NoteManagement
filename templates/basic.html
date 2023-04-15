@@ -50,7 +50,7 @@
 
       <div class="profile">
         <img src="{% static 'assets/img/profile-img.png' %}" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="/">Welcome {{user.username}}</a></h1>
+        <h1 class="text-light"><a href="/">Subrata Das</a></h1>
         <div class="social-links mt-3 text-center">
           <a href="https://twitter.com/Subrata30786224" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="https://www.instagram.com/subrata_3250/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
@@ -67,7 +67,7 @@
           <li><a href="/blog" class="nav-link scrollto active"><i class="bx bx-book-content"></i> <span>Blogs</span></a></li>
           <li><a href="/contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
           {% if not request.user.is_authenticated %}
-            <li><a href="/auth/signup" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sign Up</span></a></li>
+            <li><a href="/auth/signup/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sign Up</span></a></li>
             <li><a href="/auth/login" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Log In</span></a></li>
           {% else %}
             <li><a href="/auth/logout" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Log Out</span></a></li>

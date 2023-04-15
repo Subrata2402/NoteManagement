@@ -7,20 +7,21 @@ from django.contrib.auth import login, logout, authenticate
 # Create your views here.
 def signup(request):
 	if request.method == "POST":
+		get_username = request.POST.get('username')
 		get_email = request.POST.get('email')
 		get_password = request.POST.get('password')
 		get_confirm_password = request.POST.get('cnfpassword')
 		# print(get_email, get_password, get_confirm_password)
 		if get_password != get_confirm_password:
 			messages.info(request, "Password does not match")
-			return redirect('/auth/signup')
+			return redirect('/auth/signup/')
 		try:
-			if User.objects.get(username=get_email):
+			if User.objects.get(username=get_username):
 				messages.warning(request, "User already exists")
-				return redirect('/auth/signup')
+				return redirect('/auth/signup/')
 		except Exception as identifier:
 			pass
-		myuser = User.objects.create_user(get_email, get_email, get_password)
+		myuser = User.objects.create_user(get_username, get_email, get_password)
 		myuser.save()
 		messages.success(request, "User created successfully! Please login to continue.")
 		return redirect('/auth/login')
@@ -28,12 +29,12 @@ def signup(request):
 
 def handleLogin(request):
 	if request.method == "POST":
-		get_email = request.POST.get('email')
+		get_username = request.POST.get('username')
 		get_password = request.POST.get('password')
-		if not User.objects.filter(username=get_email).exists():
+		if not User.objects.filter(username=get_username).exists():
 			messages.error(request, "User does not exist")
 			return redirect('/auth/login')
-		myuser = authenticate(username=get_email, password=get_password)
+		myuser = authenticate(username=get_username, password=get_password)
 		if myuser:
 			login(request, myuser)
 			messages.success(request, "Logged in successfully!")
