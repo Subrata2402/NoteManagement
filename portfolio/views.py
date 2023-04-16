@@ -34,7 +34,7 @@ def contact(request):
 		from_email = settings.EMAIL_HOST_USER
 		connection = mail.get_connection()
 		connection.open()
-		email_message = mail.EmailMessage(f"Email from {name}", f"User's email: {email}\nUser's phone number: {phone_number}\n\n\nUser's query: {description}", from_email, ["subrata3250das@gmail.com", email], connection=connection)
+		email_message = mail.EmailMessage(f"Email from {name}", f"User's email: {email}\nUser's phone number: {phone_number}\n\n\nUser's query: {description}", from_email, [email], connection=connection)
 		connection.send_messages([email_message])
 		connection.close()
 		messages.success(request, "Your message has been sent successfully! We will get back to you soon. Thank you!")
