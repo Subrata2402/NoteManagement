@@ -12,9 +12,9 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons
-  <link href="{% static 'assets/img/favicon.png" rel="icon">
-  <link href="{% static 'assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+  <!-- Favicons -->
+  {% comment %} <link href="{% static 'assets/img/favicon.png %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png %}" rel="apple-touch-icon"> {% endcomment %}
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -67,6 +67,7 @@
           <li><a href="/resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
           <li><a href="/blog" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Blogs</span></a></li>
           <li><a href="/contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="/questions/topic" class="nav-link scrollto"><i class="bi bi-question-circle"></i> <span>Questions</span></a></li>
           {% if not request.user.is_authenticated %}
             <li><a href="/auth/signup/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sign Up</span></a></li>
             <li><a href="/auth/login" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Log In</span></a></li>
@@ -90,7 +91,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
+        &copy; Copyright <strong><span>Portfolio</span></strong>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

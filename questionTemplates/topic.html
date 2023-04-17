@@ -1,0 +1,66 @@
+{% extends 'basic.html' %}
+{% block title %} Subrata - Login {% endblock title %}
+{% block stylecss %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock stylecss %}
+{% block body %}
+{% load static %}
+<br>
+<li><div class="row row-cols-1 row-cols-md-2 g-4 text-center">
+	<div class="card" style="width: 30rem;">
+		<img src="{% static 'assets/img/ai.jpg' %}" class="card-img-top" alt="AI">
+		<div class="card-body">
+		<h3 class="card-title"><strong>Artificial Inteligence</strong></h3>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="#" class="btn btn-primary">Questions</a>
+		</div>
+	</div>
+	<br>
+	<div class="card" style="width: 30rem;">
+		<img src="{% static 'assets/img/soft-computing.png' %}" class="card-img-top" alt="Soft Computing">
+		<div class="card-body">
+		<h3 class="card-title"><strong>Soft Computing</strong></h3>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="#" class="btn btn-primary">Questions</a>
+		</div>
+	</div>
+	<br>
+	<div class="card" style="width: 30rem;">
+		<img src="{% static 'assets/img/automata.jpeg' %}" class="card-img-top" alt="Automata">
+		<div class="card-body">
+		<h3 class="card-title"><strong>Automata</strong></h3>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="#" class="btn btn-primary">Questions</a>
+		</div>
+	</div>
+</div>
+<br>
+<div class="row row-cols-1 row-cols-md-2 g-4 text-center">
+	<div class="card" style="width: 30rem;">
+		<img src="{% static 'assets/img/dbms.png' %}" class="card-img-top" alt="DBMS">
+		<div class="card-body">
+		<h3 class="card-title"><strong>DBMS</strong></h3>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="/questions/dbms" class="btn btn-primary">Questions</a>
+		</div>
+	</div>
+	<br>
+	<div class="card" style="width: 30rem;">
+		<img src="{% static 'assets/img/green-computing.jpg' %}" class="card-img-top" alt="Green Computing">
+		<div class="card-body">
+		<h3 class="card-title"><strong>Green Computing</strong></h3>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="#" class="btn btn-primary">Questions</a>
+		</div>
+	</div>
+	<br>
+	<div class="card" style="width: 30rem;">
+		<img src="{% static 'assets/img/compiler-design.jpeg' %}" class="card-img-top" alt="Compiler Design">
+		<div class="card-body">
+		<h3 class="card-title"><strong>Compiler Design</strong></h3>
+		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<a href="#" class="btn btn-primary">Questions</a>
+		</div>
+	</div>
+</div>
+{% endblock body %}
