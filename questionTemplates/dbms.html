@@ -40,8 +40,8 @@
 <br>
 {% for question in questions %}
 	<div class="card text-bg-dark mb-3"">
-		<div class="card-header">
-			<h5 class="card-title">{{forloop.counter}}. {{question.question}}</h5>
+		<div class="card-header text-bg-success">
+			<h5 class="card-title"><strong>{{forloop.counter}}. {{question.question}}</strong></h5>
 		</div>
 		<div class="card-body">
 		<p class="card-text">{{question.answer}}</p>

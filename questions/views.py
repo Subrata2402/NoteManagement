@@ -12,6 +12,6 @@ def dbms(request):
 		query = DBMS(question=question, answer=answer)
 		query.save()
 		messages.success(request, "Question added successfully!")
-		return redirect('/questions/dbms')
+		return redirect('/papers/dbms')
 	context = {'questions': DBMS.objects.all()}
 	return render(request, 'dbms.html', context)
